@@ -3,13 +3,15 @@ import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import SearchScreen from '../screens/SearchScreen';
 import BookingDetailScreen from '../screens/BookingDetailScreen';
+import SplashScreen from '../splash/SplashScreen';
 
 const Stack = createNativeStackNavigator();
 
 const AppNavigator = () => {
     return (
+        
         <Stack.Navigator
-            initialRouteName="Search"
+            initialRouteName="Splash"
             screenOptions={{
                 headerStyle: {
                     backgroundColor: '#007AFF',
@@ -20,6 +22,11 @@ const AppNavigator = () => {
                 },
             }}
         >
+            <Stack.Screen
+                name="Splash"
+                component={SplashScreen}
+                options={{ title: 'Splash Screen' }}
+            />
             <Stack.Screen
                 name="Search"
                 component={SearchScreen}
