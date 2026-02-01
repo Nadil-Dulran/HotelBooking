@@ -10,9 +10,6 @@ const App = () => {
     return (
         <SafeAreaProvider>
             <NavigationContainer>
-                <SplashScreen />
-            </NavigationContainer>
-            <NavigationContainer>
                 <AppNavigator />
             </NavigationContainer>
         </SafeAreaProvider>
