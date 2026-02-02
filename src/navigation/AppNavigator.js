@@ -25,7 +25,7 @@ const AppNavigator = () => {
             <Stack.Screen
                 name="Splash"
                 component={SplashScreen}
-                options={{ title: 'Splash Screen' }}
+                options={{ headerShown: false }}
             />
             <Stack.Screen
                 name="Search"
