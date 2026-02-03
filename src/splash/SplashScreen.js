@@ -8,7 +8,7 @@ const SplashScreen = () => {
   useEffect(() => {
     Animated.sequence([
       Animated.timing(opacity, {
-        toValue: 1.2,
+        toValue: 1,
         duration: 400,
         useNativeDriver: true,
       }),
