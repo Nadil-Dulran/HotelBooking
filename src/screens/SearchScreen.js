@@ -1,9 +1,9 @@
-
 import React, { useState } from 'react';
 import { View, Text, TextInput, FlatList, StyleSheet, Alert, TouchableOpacity, ActivityIndicator } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { searchHotels } from '../services/mockHotels';
 import HotelCard from '../components/HotelCard';
+import DateTimePicker from '@react-native-community/datetimepicker';
 
 const SearchScreen = ({ navigation }) => {
     const [destination, setDestination] = useState('');
@@ -13,6 +13,7 @@ const SearchScreen = ({ navigation }) => {
     const [hotels, setHotels] = useState([]);
     const [loading, setLoading] = useState(false);
     const [searched, setSearched] = useState(false);
+    const [showPicker, setShowPicker] = useState(null); 
 
     const handleSearch = async () => {
         setLoading(true);
@@ -45,18 +46,30 @@ const SearchScreen = ({ navigation }) => {
                     onChangeText={setDestination}
                 />
                 <View style={styles.row}>
+                      <View style={styles.dateInputContainer}>
                     <TextInput
                         style={[styles.input, styles.halfInput]}
-                        placeholder="Check-in (YYYY-MM-DD)"
+                        placeholder="Check-in"
                         value={checkIn}
-                        onChangeText={setCheckIn}
+                        editable={false}
+                        onPress={() => setShowPicker('checkIn')}
                     />
+                    <TouchableOpacity onPress={() => setShowPicker('checkIn')}>
+                      <Text style={styles.calendarIcon}>📅</Text>
+                    </TouchableOpacity>
+                    </View>
+                    <View style={styles.dateInputContainer}>
                     <TextInput
                         style={[styles.input, styles.halfInput]}
-                        placeholder="Check-out (YYYY-MM-DD)"
+                        placeholder="Check-out"
                         value={checkOut}
-                        onChangeText={setCheckOut}
+                        editable={false}
+                        onPress={() => setShowPicker('checkOut')}
                     />
+                    <TouchableOpacity onPress={() => setShowPicker('checkOut')}>
+                         <Text style={styles.calendarIcon}>📅</Text>
+                    </TouchableOpacity>
+                    </View>
                 </View>
                 <TextInput
                     style={styles.input}
@@ -85,6 +98,26 @@ const SearchScreen = ({ navigation }) => {
                     ) : null
                 }
             />
+           {showPicker && (
+           <DateTimePicker
+             value={new Date()}
+             mode="date"
+             display="calendar"
+             onChange={(event, selectedDate) => {
+               setShowPicker(null);
+               if (!selectedDate) return;
+
+               const formatted = selectedDate.toISOString().split('T')[0];
+
+               if (showPicker === 'checkIn') {
+                 setCheckIn(formatted);
+               } else {
+                 setCheckOut(formatted);
+               }
+             }}
+           />
+          )}
+
         </SafeAreaView>
     );
 };
