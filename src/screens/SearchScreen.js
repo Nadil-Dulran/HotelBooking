@@ -150,17 +150,18 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#e0e0e0',
         borderRadius: 8,
-        padding: 12,
+        padding: 10,
         marginBottom: 12,
+        marginTop: 12,
         fontSize: 16,
         color: '#333',
     },
     row: {
         flexDirection: 'row',
-        justifyContent: 'space-between',
+        gap: 8,
     },
     halfInput: {
-        width: '48%',
+        width: '60%',
     },
     searchButton: {
         backgroundColor: '#007AFF',
@@ -187,25 +188,29 @@ const styles = StyleSheet.create({
     dateInputContainer: {
     flexDirection: 'row',
     alignItems: 'center',
-    width: '48%',
+    flex: 1,
     backgroundColor: '#f9f9f9',
     borderWidth: 1,
     borderColor: '#e0e0e0',
     borderRadius: 8,
-    paddingHorizontal: 12,
+    paddingHorizontal: 7,
+    height: 70,
     },
 
     dateInput: {
     flex: 1,
-    paddingVertical: 12,
+    paddingVertical: 0,
     fontSize: 16,
     color: '#333',
     },
 
     calendarIcon: {
     fontSize: 20,
-    marginLeft: 8,
+    marginLeft: 40,
+    lineHeight: 20,
     },
     });
 
 export default SearchScreen;
+
+// Edit the styles to make the calendar icon look better
