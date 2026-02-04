@@ -6,6 +6,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import SplashScreen from './src/splash/SplashScreen';
 import SearchScreen from './src/screens/SearchScreen';
 import BookingDetailScreen from './src/screens/BookingDetailScreen';
+import BookingsScreen from './src/booking/BookingsScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -46,6 +47,11 @@ const App = () => {
                 name="BookingDetails"
                 component={BookingDetailScreen}
                 options={{ title: 'Booking Details' }}
+              />
+              <Stack.Screen
+                name="Bookings"
+                component={BookingsScreen}
+                options={{ title: 'Bookings' }}
               />
             </>
           )}
