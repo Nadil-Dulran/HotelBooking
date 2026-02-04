@@ -183,6 +183,29 @@ const styles = StyleSheet.create({
         fontSize: 16,
         color: '#666',
     },
-});
+
+    dateInputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    width: '48%',
+    backgroundColor: '#f9f9f9',
+    borderWidth: 1,
+    borderColor: '#e0e0e0',
+    borderRadius: 8,
+    paddingHorizontal: 12,
+    },
+
+    dateInput: {
+    flex: 1,
+    paddingVertical: 12,
+    fontSize: 16,
+    color: '#333',
+    },
+
+    calendarIcon: {
+    fontSize: 20,
+    marginLeft: 8,
+    },
+    });
 
 export default SearchScreen;
