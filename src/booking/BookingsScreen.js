@@ -50,8 +50,31 @@ const styles = StyleSheet.create({
         marginBottom: 16,
         color: '#333',
     },
-
-    
+    bookingDetails: {
+        padding: 15,
+        backgroundColor: 'white',
+        borderBottomLeftRadius: 15,
+        borderBottomRightRadius: 15,
+        elevation: 4,
+        shadowColor: '#000',
+        shadowOffset: { width: 0, height: 2 },
+        shadowOpacity: 0.1,
+        shadowRadius: 4,
+        marginBottom: 8,
+    },
+    bookingDetailsText: {
+        marginLeft: 5,
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginBottom: 16,
+        color: '#007AFF',
+    },
+    bookingDetailsValue: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        marginBottom: 16,
+        color: '#292461ff',
+    },
 });
 
 export default BookingsScreen
