@@ -14,7 +14,9 @@ const BookingDetailScreen = ({ route, navigation }) => {
             [
                 {
                     text: 'OK',
-                    onPress: () => navigation.popToTop(), // Go back to search
+                    onPress: () => {
+                        navigation.replace('Bookings');
+                    }, 
                 },
             ]
         );
