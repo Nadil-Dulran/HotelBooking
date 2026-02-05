@@ -15,8 +15,13 @@ const BookingDetailScreen = ({ route, navigation }) => {
                 {
                     text: 'OK',
                     onPress: () => {
-                        navigation.replace('Bookings');
-                    }, 
+                        navigation.replace('Bookings', {
+                            hotel,
+                            checkIn,
+                            checkOut,
+                            guests,
+                        });
+                    },
                 },
             ]
         );
