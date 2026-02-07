@@ -49,3 +49,7 @@ To connect a real backend:
     # or
     yarn install
     ```
+2.  **Install iOS Pods** (Mac only):
+    ```bash
+    cd ios && pod install && cd ..
+    ```
