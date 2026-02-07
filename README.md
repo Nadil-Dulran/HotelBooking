@@ -31,3 +31,13 @@ HotelBooking/
 ├── App.js              # Entry point & Navigation Setup
 └── index.js            # AppRegistry Root
 ```
+
+## Backend Implementation
+
+Currently, the app uses **Mock Data** (`src/services/mockHotels.js`).
+To connect a real backend:
+1.  **Select a Stack**: Node.js + MongoDB or Firebase.
+2.  **Update Service**: Replace `mockHotels.js` functions to fetch from your API.
+    *   *Note for Android Emulator*: Use `10.0.2.2` to access `localhost`.
+3.  **Handle Async**: Ensure `loading` states are used in `SearchScreen.js`.
+
