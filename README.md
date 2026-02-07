@@ -53,3 +53,9 @@ To connect a real backend:
     ```bash
     cd ios && pod install && cd ..
     ```
+3.  **Run the App**:
+    ```bash
+    npx react-native run-android
+    # or
+    npx react-native run-ios
+    ```
