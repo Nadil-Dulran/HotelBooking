@@ -6,7 +6,6 @@ import AppNavigator from './src/navigation/AppNavigator';
 
 const App = () => {
 
-
   return (
     <SafeAreaProvider>
       <NavigationContainer>
@@ -15,6 +14,5 @@ const App = () => {
     </SafeAreaProvider>
   );
 };
-
 
 export default App;
