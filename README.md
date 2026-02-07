@@ -41,3 +41,11 @@ To connect a real backend:
     *   *Note for Android Emulator*: Use `10.0.2.2` to access `localhost`.
 3.  **Handle Async**: Ensure `loading` states are used in `SearchScreen.js`.
 
+## Getting Started
+
+1.  **Install dependencies**:
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
